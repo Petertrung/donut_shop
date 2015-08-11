@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form method="post" id="myform" onsubmit="return check()">
+		<input type="text" id="t1">
+		<input type="submit" value="submit date">
+	</form>
+	<script>
+	function check(){
+		var name = document.getElementById("t1").value;
+		if(name.length < 1){
+			alert("Name Field is empty")
+		}
+	}
+	</script>
+</body>
+</html>
