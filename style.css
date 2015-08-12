@@ -37,8 +37,7 @@ body{
 	font-size: 45;
 	font-weight: bold;
 	float: left;
-	clear: right;
-	
+	text-align: center;	
 }
 td{
 	border: solid;
@@ -47,21 +46,23 @@ td{
 	font-size: 45;
 }
 .form{
-	float: right;
 	border: solid;
 	border-color: rgb(0,0,0);
 	background-color: #00557c;
 	width: 19%;
 	margin-right: 10px; 
 	margin-left: auto;
-	text-align: center;
+	text-align: left;
 }
 .article{
-
 	text-align: center;
 	background-color: #BBE5F3;
 	font-family: 'Oswald', sans-serif;
 }
 footer{
 	font-weight: bold;
+}
+
+p {
+	width: 800px;
 }
