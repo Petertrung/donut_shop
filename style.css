@@ -1,8 +1,67 @@
+/* Table of Contents
+Everything
+head
+Body
+	Table
+		columns and Rows
+	Form
+	Article
+
+*/
+
+*{
+	font-family: 'Oswald', sans-serif;
+	font-size: 45;
+	font-weight: bold;
+}
+.header{
+	background-color: #81C1DC;
+}
+#head{
+  font-size: 72px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+body{
+	width: 80%;
+	margin-right: auto; 
+	margin-left: auto;
+	background-color: #3488AD; 
+}
 #myTable{
 	border: solid;
-	border-color: blue;
+	border-color: grey;
+	background-color: #00557c;
+	font-size: 45;
+	font-weight: bold;
+	float: left;
+	clear: right;
+	
 }
 td{
 	border: solid;
-	border-color: blue;
+	border-color: grey;
+	font-weight: bold;
+	font-size: 45;
+}
+.form{
+	float: right;
+	border: solid;
+	border-color: rgb(0,0,0);
+	background-color: #00557c;
+	width: 19%;
+	margin-right: 10px; 
+	margin-left: auto;
+	text-align: center;
+}
+.article{
+
+	text-align: center;
+	background-color: #BBE5F3;
+	font-family: 'Oswald', sans-serif;
+}
+footer{
+	font-weight: bold;
 }

@@ -12,22 +12,21 @@ var DonutShop = function(locationName, min, max, nut) {
 DonutShop.prototype.getCustomersArray = function (){
   console.log(this.locationName);
   for(var i = 0; i < this.hours; i++ ){
-    this.getNutHour.push(Math.floor(Math.random() * (this.max - this.min + 1)) + this.min);
+    this.getNutHour.push(Math.floor(this.nut) * (Math.floor(Math.random() * (this.max - this.min + 1)) + this.min));
   }
    ;
       for (var i = 0; i < this.getNutHour.length; i++) {
         this.totalNuts += this.getNutHour[i];
     }
-  console.log(this.totalNuts)
+  console.log(this.totalNuts);
+  console.log(location);
 }
 
 var myTab = document.getElementById('myTable');
 
 
 
-
-
-DonutShop.prototype.render = function(){ 
+DonutShop.prototype.renderAll = function(){ 
  var getTable = document.getElementById('myTable');  
     
  var newRow = document.createElement('tr'); 
@@ -48,16 +47,57 @@ for (var i = 0; i < this.hours; i++)
   var newCell = document.createElement('td'); 
     newCell.innerHTML = this.totalNuts;  
     newRow.appendChild(newCell);  
-   }
+  }
 
-var downtown = new DonutShop("Downtown", 8, 43, 4.5);
-var capitol = new DonutShop("Capitol Hill", 4, 37, 2);
-var south = new DonutShop("South Lake Union", 9, 23, 6.33);
-var wood = new DonutShop("Wedgewood", 2, 28, 1.25);
-var ballard = new DonutShop("Ballard", 8, 58, 3.75);
+var downtown = new DonutShop("Downtown", 8, 43, 4.5).renderAll();
+var capitol = new DonutShop("Capitol Hill", 4, 37, 2).renderAll();
+var south = new DonutShop("South Lake Union", 9, 23, 6.33).renderAll();
+var wood = new DonutShop("Wedgewood", 2, 28, 1.25).renderAll();
+var ballard = new DonutShop("Ballard", 8, 58, 3.75).renderAll();
 var shops =[downtown, capitol, south, wood, ballard];
-							
- 
- for (var i = 0 ;i < shops.length; i++) {
-  shops[i].render();
+
+// function render() {							
+//  for (var i = 0 ;i < shops.length; i++) {
+//   shops[i].renderAll();
+//   }
+// }
+// render();
+
+
+  var btn = document.getElementById('btn');
+  btn.addEventListener('click', retrivenSend)
+
+    function retrivenSend() {
+    // document.getElementById("theForm").submit();
+      var x = document.getElementById("x").value ;
+      var y = document.getElementById("y").value ; 
+      var location = document.getElementById("location").value;
+      var z = document.getElementById("z").value;
+      var news= new DonutShop(location, y, x, z);
+  //     for(var i = 0; i < this.hours; i++ ){
+  //   this.getNutHour.push(Math.floor(z) * (Math.floor(Math.random() * (x - y + 1)) + y));
+  // }
+  //     for (var i = 0; i < 11; i++) {
+  //       this.totalNuts += this.getNutHour[i];
+  //   }
+
+      news.renderAll();
+
+
+
 }
+ 
+
+//     DonutShop.prototype.getCustomersArray = function (){
+//         console.log(locationName);
+//         for(var i = 0; i < this.hours; i++ ){
+//           this.getNutHour.push(Math.floor(z) * (Math.floor(Math.random() * (x - y + 1)) + y));
+//         }
+//          ;
+//             for (var i = 0; i < this.getNutHour.length; i++) {
+//               this.totalNuts += this.getNutHour[i];
+//           }
+//         console.log(this.totalNuts);
+//         console.log(location);
+//         news.render();
+// }
