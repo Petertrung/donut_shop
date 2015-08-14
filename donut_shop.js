@@ -68,36 +68,13 @@ var shops =[downtown, capitol, south, wood, ballard];
   btn.addEventListener('click', retrivenSend)
 
     function retrivenSend() {
-    // document.getElementById("theForm").submit();
       var x = document.getElementById("x").value ;
       var y = document.getElementById("y").value ; 
       var location = document.getElementById("location").value;
       var z = document.getElementById("z").value;
       var news= new DonutShop(location, y, x, z);
-  //     for(var i = 0; i < this.hours; i++ ){
-  //   this.getNutHour.push(Math.floor(z) * (Math.floor(Math.random() * (x - y + 1)) + y));
-  // }
-  //     for (var i = 0; i < 11; i++) {
-  //       this.totalNuts += this.getNutHour[i];
-  //   }
 
       news.renderAll();
 
-
-
 }
  
-
-//     DonutShop.prototype.getCustomersArray = function (){
-//         console.log(locationName);
-//         for(var i = 0; i < this.hours; i++ ){
-//           this.getNutHour.push(Math.floor(z) * (Math.floor(Math.random() * (x - y + 1)) + y));
-//         }
-//          ;
-//             for (var i = 0; i < this.getNutHour.length; i++) {
-//               this.totalNuts += this.getNutHour[i];
-//           }
-//         console.log(this.totalNuts);
-//         console.log(location);
-//         news.render();
-// }
